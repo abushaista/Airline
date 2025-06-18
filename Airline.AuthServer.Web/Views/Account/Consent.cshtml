@@ -1,0 +1,69 @@
+﻿@page
+
+@model Airline.AuthServer.Web.ViewModels.ConsentViewModel
+
+@{
+    ViewData["Title"] = "Authorize Application";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CleanOAuthServer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">@ViewData["Title"]</h1>
+
+        <p class="text-gray-700 mb-4">The application <strong class="text-blue-600">@Model.ApplicationName</strong> is requesting access to your data.</p>
+        <p class="text-gray-700 font-semibold mb-3">It is requesting the following permissions:</p>
+        <ul class="list-disc list-inside mb-6 text-gray-700">
+            @if (!string.IsNullOrEmpty(Model.Scope))
+            {
+                @foreach (var scope in Model.Scope.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+                {
+                    <li class="mb-1">
+                        <span class="font-mono bg-gray-200 px-2 py-1 rounded text-sm">@scope</span>
+                        @if (scope == "openid")
+                        {
+                            <span class="text-gray-500">- Authenticate your identity</span>
+                        }
+                        else if (scope == "profile")
+                        {
+
+                            <span class="text-gray-500">- Access your basic profile information</span>
+                        }
+                        else if (scope == "email")
+                        {
+
+                            <span class="text-gray-500">- Access your email address</span>
+                        }
+                        else if (scope == "roles")
+                        {
+
+                            <span class="text-gray-500">- Access your roles</span>
+                        }
+                        else if (scope == "offline_access")
+                        {
+
+                            <span class="text-gray-500">- Allow long-lived access (refresh token)</span>
+                        }
+                    </li>
+                }
+            }
+        </ul>
+
+        <form asp-action="Consent" asp-controller="Account" method="post" class="flex justify-between space-x-4">
+            <button type="submit" name="submit.Accept" value="Accept" class="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-150 ease-in-out">Accept</button>
+            <button type="submit" name="submit.Deny" value="Deny" class="flex-1 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-150 ease-in-out">Deny</button>
+        </form>
+    </div>
+</body>
+</html>
