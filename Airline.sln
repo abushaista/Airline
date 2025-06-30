@@ -13,6 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.AuthServer.Infrastr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.AuthServer.Web", "Airline.AuthServer.Web\Airline.AuthServer.Web.csproj", "{C8E82137-144A-4CC8-87B0-577E1A4F53ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schedule", "Schedule", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MasterData", "MasterData", "{2AAF39F8-4D25-4FB5-B8A4-2E0F5EAE61CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.MasterData.Domain", "Airline.MasterData.Domain\Airline.MasterData.Domain.csproj", "{BE66B010-B4DC-461F-9797-A078E5C54612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.MasterData.Application", "Airline.MasterData.Application\Airline.MasterData.Application.csproj", "{2D16816C-418B-4E0C-91CF-CEF472A7D9D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.MasterData.Infrastructure", "Airline.MasterData.Infrastructure\Airline.MasterData.Infrastructure.csproj", "{E443B507-B3B3-42FA-B381-3EC873395CE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +45,18 @@ Global
 		{C8E82137-144A-4CC8-87B0-577E1A4F53ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E82137-144A-4CC8-87B0-577E1A4F53ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E82137-144A-4CC8-87B0-577E1A4F53ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE66B010-B4DC-461F-9797-A078E5C54612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE66B010-B4DC-461F-9797-A078E5C54612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE66B010-B4DC-461F-9797-A078E5C54612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE66B010-B4DC-461F-9797-A078E5C54612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D16816C-418B-4E0C-91CF-CEF472A7D9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D16816C-418B-4E0C-91CF-CEF472A7D9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D16816C-418B-4E0C-91CF-CEF472A7D9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D16816C-418B-4E0C-91CF-CEF472A7D9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E443B507-B3B3-42FA-B381-3EC873395CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E443B507-B3B3-42FA-B381-3EC873395CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E443B507-B3B3-42FA-B381-3EC873395CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E443B507-B3B3-42FA-B381-3EC873395CE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +66,9 @@ Global
 		{29C761AC-0144-4C81-8449-FABE1A8B7358} = {4E3C78A8-2C8C-43E8-B1CB-8AEBF2E23165}
 		{DEB0DDED-F225-4B4C-BDEB-3B7BFA9D9AD1} = {4E3C78A8-2C8C-43E8-B1CB-8AEBF2E23165}
 		{C8E82137-144A-4CC8-87B0-577E1A4F53ED} = {4E3C78A8-2C8C-43E8-B1CB-8AEBF2E23165}
+		{BE66B010-B4DC-461F-9797-A078E5C54612} = {2AAF39F8-4D25-4FB5-B8A4-2E0F5EAE61CE}
+		{2D16816C-418B-4E0C-91CF-CEF472A7D9D2} = {2AAF39F8-4D25-4FB5-B8A4-2E0F5EAE61CE}
+		{E443B507-B3B3-42FA-B381-3EC873395CE8} = {2AAF39F8-4D25-4FB5-B8A4-2E0F5EAE61CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {771FDC2D-3A4C-45E7-8872-6BBCA5ABB515}
