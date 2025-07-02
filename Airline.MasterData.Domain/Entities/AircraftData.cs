@@ -9,8 +9,9 @@ public class AircraftData
 {
     public AircraftData() { }
 
-    public AircraftData(string manufacturer, string model, string engineType, double maxSpeedKnots, double ceilingFt, double grossWeightLbs, double lengthFt, double heightFt, double wingSpanFt, double rangeNauticalMiles)
+    public AircraftData(string iatacode,string manufacturer, string model, string engineType, double maxSpeedKnots, double ceilingFt, double grossWeightLbs, double lengthFt, double heightFt, double wingSpanFt, double rangeNauticalMiles)
     {
+        IataCode = iatacode;
         Manufacturer = manufacturer;
         Model = model;
         EngineType = engineType;
@@ -24,6 +25,7 @@ public class AircraftData
     }
 
     public int Id { get; set; }
+    public string IataCode { get; set; }
     public string Manufacturer { get; set; }
     public string Model { get; set; }
     public string EngineType { get; set; }

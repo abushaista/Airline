@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Airline.MasterData.Application.Features.AircraftModels.Commands;
-public record CreateAircraftModelCommand(string Manufacturer, string Model, string EngineType, double MaxSpeedKnots, double CeilingFt, double GrossWeightLbs, double LengthFt, double HeightFt, double WingSpanFt, double RangeNauticalMiles) : IRequest<CreateAircraftModelResponse>;
+public record CreateAircraftModelCommand(string Iatacode, string Manufacturer, string Model, string EngineType, double MaxSpeedKnots, double CeilingFt, double GrossWeightLbs, double LengthFt, double HeightFt, double WingSpanFt, double RangeNauticalMiles) : IRequest<CreateAircraftModelResponse>;
 
 public record CreateAircraftModelResponse(bool Succeeded, string[] Errors, AircraftData? AircraftModel);
 
@@ -42,6 +42,7 @@ public class CreateAircraftModelCommandHandler : IRequestHandler<CreateAircraftM
     private AircraftData CommandToModel(CreateAircraftModelCommand command) {
         return new AircraftData()
         {
+            IataCode = command.Iatacode,
             Manufacturer = command.Manufacturer,
             Model = command.Model,
             EngineType = command.EngineType,

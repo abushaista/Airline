@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.MasterData.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.MasterData.Infrastructure", "Airline.MasterData.Infrastructure\Airline.MasterData.Infrastructure.csproj", "{E443B507-B3B3-42FA-B381-3EC873395CE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fleet", "Fleet", "{654E08B3-215E-45CC-9947-DF74D4CCDAC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
